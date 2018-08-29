@@ -1,0 +1,87 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    min-height: 500px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+table, th, td {
+    border: 2px solid black;
+
+}
+
+/*table {
+    margin: 20px 0px;
+}*/
+
+.btn {
+    margin: 10px 0px;
+}
+
+.table_div {
+    /*max-height: 400px;*/
+    margin: 10px 0px;
+    /*border: double;*/
+    /*overflow: auto;*/
+   
+}
+
+#tableStudents {
+    display:none;
+
+}
+
+#message2 {
+          width: 100%;
+          display: none;
+         
+          
+
+
+}
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+#message2 p {
+    font-size: 1em;
+    padding: 5px;
+    color: white;
+}
+
+#tableCourseInfo {
+
+    display: none;
+}
+
+/*footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}*/
