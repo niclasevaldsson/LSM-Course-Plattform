@@ -1,15 +1,42 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    min-height: 500px;
+﻿html {
+    height: 100%;
 }
 
-/* Set padding to keep content from hitting the edges */
+a {
+    color: #EFB509;
+}
+
+
+.btn {
+    color:  whitesmoke;
+}
+
+body {
+    padding-top: 50px;   
+    height: 100%;
+    background-color: #002C54;
+    padding-bottom: 0px;
+}
+#navbarTop {
+    background-color: #16253D !important;
+    color: #EFB509 !important;
+
+}
+
+#navbarTop a {
+    color: #EFB509 !important;
+}/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    min-height: 100%;
+    background-color: whitesmoke;
+ 
 }
 
+.bread-crum-info a {
+    color: #EFB509 !important;
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -34,6 +61,17 @@ table, th, td {
 
 .btn {
     margin: 10px 0px;
+    background-color: #16253D !important;
+    color: #EFB509 !important;
+    border: none;
+    opacity: 0.8;
+}
+
+.btn-info:hover {
+    margin: 10px 0px;
+    background-color: #16253D !important;
+    color: #EFB509 !important;
+    opacity: 1;
 }
 
 .table_div {
@@ -41,7 +79,6 @@ table, th, td {
     margin: 10px 0px;
     /*border: double;*/
     /*overflow: auto;*/
-   
 }
 
 #tableStudents {
@@ -85,3 +122,4 @@ table, th, td {
     background-color: #efefef;
     text-align: center;
 }*/
+
