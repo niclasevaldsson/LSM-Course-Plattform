@@ -50,10 +50,7 @@ select,
 textarea {
     max-width: 280px;
 }
-table, th, td {
-    border: 2px solid black;
 
-}
 
 /*table {
     margin: 20px 0px;
@@ -74,12 +71,14 @@ table, th, td {
     opacity: 1;
 }
 
-.table_div {
+/*.table_div {
     /*max-height: 400px;*/
     margin: 10px 0px;
     /*border: double;*/
     /*overflow: auto;*/
-}
+}*/
+
+
 
 #tableStudents {
     display:none;

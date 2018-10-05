@@ -9,34 +9,14 @@ using System.Web.Mvc;
 using LSM.Models;
 
 namespace LSM.Controllers
+
 {
-    [Authorize(Roles = "Teacher")]
+    ////[Authorize(Roles = "Teacher")]
     public class ActivitiesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Activities
-        public ActionResult Index()
-        {
-            var activitys = db.Activitys.Include(a => a.Module);
-            return View(activitys.ToList());
-        }
-
-        // GET: Activities/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Activity activity = db.Activitys.Find(id);
-            if (activity == null)
-            {
-                return HttpNotFound();
-            }
-            return View(activity);
-        }
-
+        
         // GET: Activities/Create
         [Authorize(Roles = "Teacher")]
         public ActionResult Create(int ModuleId)
@@ -80,7 +60,8 @@ namespace LSM.Controllers
             }
             ViewBag.ModuleId = new SelectList(db.Modules, "Id", "Name", activity.ModuleId);
             return View(activity);
-        }
+        }     
+
 
         // POST: Activities/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -126,7 +107,8 @@ namespace LSM.Controllers
             db.Activitys.Remove(activity);
             db.SaveChanges();
             string messagetowrite = "Activity " + activity.Name + " deleted!";
-            return RedirectToAction("Edit", "Modules", new { id = activity.ModuleId, message = messagetowrite});
+            return RedirectToAction("Edit", "Modules", new { id = activity.ModuleId, message = messagetowrite});          
+            
 
         }
 

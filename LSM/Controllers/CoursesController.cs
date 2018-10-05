@@ -19,6 +19,7 @@ namespace LSM.Controllers
         // GET: Courses
         public ActionResult Index(int? id, string message="None")
         {
+            
             ViewBag.Message = message;
             string usernamne = User.Identity.GetUserId();
             var user = db.Users.Find(usernamne);
@@ -30,20 +31,20 @@ namespace LSM.Controllers
             return RedirectToAction("Index", "Student");
         }
 
-        [Authorize(Roles = "Teacher")]
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Course course = db.Courses.Find(id);
-            if (course == null)
-            {
-                return HttpNotFound();
-            }
-            return View(course);
-        }
+        //[Authorize(Roles = "Teacher")]
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Course course = db.Courses.Find(id);
+        //    if (course == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(course);
+        //}
 
         [Authorize(Roles = "Teacher")]
         public ActionResult Create()
