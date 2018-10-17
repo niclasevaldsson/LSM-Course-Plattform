@@ -200,9 +200,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201808291702414_migration55.cs" />
-    <Compile Include="Migrations\201808291702414_migration55.Designer.cs">
-      <DependentUpon>201808291702414_migration55.cs</DependentUpon>
+    <Compile Include="Migrations\201810170818001_Fxes.cs" />
+    <Compile Include="Migrations\201810170818001_Fxes.Designer.cs">
+      <DependentUpon>201810170818001_Fxes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -254,9 +254,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -313,8 +310,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808291702414_migration55.resx">
-      <DependentUpon>201808291702414_migration55.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810170818001_Fxes.resx">
+      <DependentUpon>201810170818001_Fxes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

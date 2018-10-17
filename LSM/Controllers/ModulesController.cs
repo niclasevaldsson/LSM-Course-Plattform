@@ -40,6 +40,7 @@ namespace LSM.Controllers
         // GET: Modules/Create
         public ActionResult Create(int CourseId)
         {
+
             ViewBag.CourseForModule = CourseId;
 
             ViewBag.Course = db.Courses.Where(c => c.Id == CourseId).First();
@@ -54,6 +55,15 @@ namespace LSM.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Description,StartDate,StopDate,CourseId")] Module module)
         {
+            if (module.StartDate > module.StopDate || module.StartDate < DateTime.Now.Date)
+            {
+
+
+              return RedirectToAction("Create", "Courses", new {Courseid = module.CourseId});
+
+            }
+
+
             if (ModelState.IsValid)
             {
                 db.Modules.Add(module);

@@ -34,9 +34,9 @@
 </nav>
 
 <h1>Courses</h1>
-@if (!(ViewBag.Message == "None"))
+@if (!string.IsNullOrWhiteSpace(messagetosend))
 {
-    <div id="message2" class="@colortoshow"><p>@ViewBag.Message</p></div>
+    <div id="message2" class="@colortoshow"><p>messagetosend</p></div>
 }
 <p>
     @Html.ActionLink("Add new Course", "Create", new { id = "" }, new { @class = "btn btn-success" })
@@ -56,7 +56,7 @@
         {
             <tr>
                 <td>
-                  @Html.ActionLink("Hej", "Edit", new { id = item.Id }, new { @class = "btn  btn-info" })
+                  @Html.ActionLink(item.Name, "Edit", new { id = item.Id }, new { @class = "btn  btn-info" })
                 </td>
                 <td>
                     @item.StartDate.ToShortDateString()

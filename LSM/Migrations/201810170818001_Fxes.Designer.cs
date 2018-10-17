@@ -7,13 +7,13 @@ namespace LSM.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class migration55 : IMigrationMetadata
+    public sealed partial class Fxes : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(migration55));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Fxes));
         
         string IMigrationMetadata.Id
         {
-            get { return "201808291702414_migration55"; }
+            get { return "201810170818001_Fxes"; }
         }
         
         string IMigrationMetadata.Source
