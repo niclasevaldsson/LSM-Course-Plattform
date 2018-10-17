@@ -9,10 +9,10 @@
 
 
 
-    if (!(ViewBag.Message == "None"))
+    if (string.IsNullOrWhiteSpace(messagetosend))
     {
 
-        if (messagetosend.Substring(messagetosend.Length - 8) == "deleted!")
+        if (messagetosend == "none")
         {
             colortoshow = "red";
         }
@@ -41,7 +41,7 @@
 <p>
     @Html.ActionLink("Add new Course", "Create", new { id = "" }, new { @class = "btn btn-success" })
 </p>
-<table class="table table-striped">
+<table class="table table-striped">  
     <thead>
         <tr>
             <th>View/Edit</th>
@@ -56,7 +56,7 @@
         {
             <tr>
                 <td>
-                    @Html.ActionLink(item.Name, "Edit", new { id = item.Id }, new { @class = "btn  btn-info" })
+                  @Html.ActionLink("Hej", "Edit", new { id = item.Id }, new { @class = "btn  btn-info" })
                 </td>
                 <td>
                     @item.StartDate.ToShortDateString()

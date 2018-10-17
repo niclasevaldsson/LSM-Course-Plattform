@@ -223,6 +223,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\body-pattern.jpeg" />
     <Content Include="Scripts\bootstrap-datepicker.min.js" />
     <Content Include="Scripts\bootstrap-datepicker.sv.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -278,30 +279,22 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Courses\Create.cshtml" />
     <Content Include="Views\Courses\Delete.cshtml" />
-    <Content Include="Views\Courses\Details.cshtml" />
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Modules\Create.cshtml" />
     <Content Include="Views\Modules\Delete.cshtml" />
-    <Content Include="Views\Modules\Details.cshtml" />
     <Content Include="Views\Modules\Edit.cshtml" />
-    <Content Include="Views\Modules\Index.cshtml" />
     <Content Include="Views\Activities\Create.cshtml" />
     <Content Include="Views\Activities\Delete.cshtml" />
-    <Content Include="Views\Activities\Details.cshtml" />
     <Content Include="Views\Activities\Edit.cshtml" />
-    <Content Include="Views\Activities\Index.cshtml" />
     <Content Include="Views\Documents\Create.cshtml" />
     <Content Include="Views\Documents\Delete.cshtml" />
     <Content Include="Views\Documents\Details.cshtml" />
     <Content Include="Views\Documents\Edit.cshtml" />
     <Content Include="Views\Documents\Index.cshtml" />
-    <Content Include="Views\Modules\View.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\Module.cshtml" />
     <Content Include="Views\Student\Activity.cshtml" />
-    <Content Include="Views\Activities\Index2.cshtml" />
-    <Content Include="Views\Activities\Edit2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

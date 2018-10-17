@@ -39,7 +39,7 @@ $(document).ready(function () {
         tableShow.show();
         tableHide.hide();
         buttonActive.addClass("active");
-        buttonNonActive.removeClass("active")
+        buttonNonActive.removeClass("active");
     }
 
 

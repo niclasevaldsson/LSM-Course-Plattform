@@ -14,8 +14,9 @@ a {
 body {
     padding-top: 50px;   
     height: 100%;
-    background-color: #002C54;
+    /*background-color: #002C54;*/
     padding-bottom: 0px;
+    background-image: url(../Images/body-pattern.jpeg);
 }
 #navbarTop {
     background-color: #16253D !important;
@@ -26,12 +27,16 @@ body {
 #navbarTop a {
     color: #EFB509 !important;
 }/* Set padding to keep content from hitting the edges */
+
+.breadcrumb {
+    background-color: #fdfdfd;
+}
+
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
     min-height: 100%;
-    background-color: whitesmoke;
- 
+    background-color: #fdfdfd;
 }
 
 .bread-crum-info a {
@@ -76,14 +81,10 @@ textarea {
     margin: 10px 0px;
     /*border: double;*/
     /*overflow: auto;*/
-}*/
-
-
-
-#tableStudents {
-    display:none;
-
 }
+
+       
+
 
 #message2 {
           width: 100%;
@@ -122,3 +123,23 @@ textarea {
     text-align: center;
 }*/
 
+#tableStudents {
+    display: none;
+}
+
+.btn-group button {
+    opacity: 0.6;
+}
+
+button.active {
+    opacity: 0.8 !important;
+ 
+}
+
+.form-horizontal {
+    background-image: url(../Images/body-pattern.jpeg);
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}

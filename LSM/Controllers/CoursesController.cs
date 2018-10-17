@@ -17,7 +17,7 @@ namespace LSM.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Courses
-        public ActionResult Index(int? id, string message="None")
+        public ActionResult Index(int? id, string message)
         {
             
             ViewBag.Message = message;

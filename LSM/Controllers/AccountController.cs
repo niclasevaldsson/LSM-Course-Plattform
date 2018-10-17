@@ -179,8 +179,33 @@ namespace LSM.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+            
+
             if (ModelState.IsValid)
             {
+
+                var listOfUsersEmails = db.Users.ToList();
+                bool emaliAlreadyExist = listOfUsersEmails.Exists(item => item.Email == model.Email);
+
+                if (emaliAlreadyExist)
+                {
+                    if (model.Teacher)
+                    {
+                     
+                        return RedirectToAction("Register", "Account", new {Teacher = "True" });
+                    }
+                    else
+                    {
+                        return RedirectToAction("Register", "Account", new { CourseId = model.CourseId, Teacher = "False" });
+                    }
+
+
+                }
+
+
+
+
+
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email,
                     FirstName = model.FirstName,                   
                     LastName = model.LastName,                   

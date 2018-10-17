@@ -26,39 +26,41 @@
                 <h2>Activities</h2>
                 <div class="table_div">
                     <table class="table">
-                        <tr>
-                            <th>View</th>
-                            <th>Day</th>
-                            <th>Pass</th>
-                        </tr>
-
-
-                        @foreach (var item in Model.Activitys.ToList())
-                        {
+                        <thead>
                             <tr>
-                                <td>
-                                    @Html.ActionLink(item.Name, "Activity", "Student", new { id = item.Id }, new { @class = "btn btn-info" })
-                                </td>
-                                <td>
-                                    @item.Day
-                                </td>
-                                <td>
-                                    @if (item.Pass == LSM.Models.Epass.FM)
-                                    {
-                                        <p>Morning</p>
-                                    }
-                                    @if (item.Pass == LSM.Models.Epass.EM)
-                                    {
-                                        <p>Afternoon</p>
-                                    }
-                                    @if (item.Pass == LSM.Models.Epass.FMEM)
-                                    {
-                                        <p>Full day</p>
-                                    }
-                                </td>
+                                <th>View</th>
+                                <th>Day</th>
+                                <th>Pass</th>
                             </tr>
-                        }
+                        </thead>
+                        <tbody>
 
+                            @foreach (var item in Model.Activitys.ToList())
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.ActionLink(item.Name, "Activity", "Student", new { id = item.Id }, new { @class = "btn btn-info" })
+                                    </td>
+                                    <td>
+                                        @item.Day
+                                    </td>
+                                    <td>
+                                        @if (item.Pass == LSM.Models.Epass.FM)
+                                        {
+                                            <p>Morning</p>
+                                        }
+                                        @if (item.Pass == LSM.Models.Epass.EM)
+                                        {
+                                            <p>Afternoon</p>
+                                        }
+                                        @if (item.Pass == LSM.Models.Epass.FMEM)
+                                        {
+                                            <p>Full day</p>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
 
                     </table>
                 </div>

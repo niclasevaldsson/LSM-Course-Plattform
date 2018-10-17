@@ -101,56 +101,56 @@
         <div class="col-md-6">
             @Html.ActionLink("Add new activity", "Create", "Activities", new { ModuleId = Model.Id }, new { @class = "btn btn-success" })
             <div class="table_div">
-                <table class="table">
-                    <tr>
-                        <th>View/Edit</th>
-                        <th>Day</th>
-                        <th>Pass</th>
-                    </tr>
-                    @foreach (var item in Model.Activitys.OrderByDescending(x=>x.Day).ToList())
-                    {
+                <table class="table table-striped">
+                    <caption>List of activities</caption>
+                    <thead>
                         <tr>
-                            <td>
-                                @Html.ActionLink(item.Name, "Edit", "Activities", new { id = item.Id }, new { @class = "btn btn-info" })
-                            </td>
-                            <td>
-                                @{  string month = item.Day.Month.ToString();
-                                }
-                                @if(month.Length == 1)
-                                {
-                                    month = 0 + month;
-                                }                                                         
-
-                                 @{ 
-                                     string day = item.Day.Day.ToString();
-                                }
-
-                                
-                                @if (day.Length == 1)
-                                {
-                                   day = 0 + day;
-                                }
-                            
-                                @item.Day.Year-@month-@day
-
-
-                            </td>
-                            <td>
-                                @if (item.Pass == LSM.Models.Epass.FM)
-                                {<p>Morning</p>
-                                }
-                                @if (item.Pass == LSM.Models.Epass.EM)
-                                {<p>Afternoon</p>
-                                }
-                                @if (item.Pass == LSM.Models.Epass.FMEM)
-                                {
-                                    <p>Full day</p>
-                                }
-                            </td>
+                            <th>View/Edit</th>
+                            <th>Day</th>
+                            <th>Pass</th>
                         </tr>
-                    }
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Activitys.OrderByDescending(x => x.Day).ToList())
+                        {
+                            <tr>
+                                <td>
+                                    @Html.ActionLink(item.Name, "Edit", "Activities", new { id = item.Id }, new { @class = "btn btn-info" })
+                                </td>
+                                <td>
+                                    @{ string month = item.Day.Month.ToString();
+                                    }
+                                    @if (month.Length == 1)
+                                    {
+                                        month = 0 + month;
+                                    }
+                                    @{
+                                        string day = item.Day.Day.ToString();
+                                    }
 
+                                    @if (day.Length == 1)
+                                    {
+                                        day = 0 + day;
+                                    }
 
+                                    @item.Day.Year-@month-@day
+
+                                </td>
+                                <td>
+                                    @if (item.Pass == LSM.Models.Epass.FM)
+                                    {<p>Morning</p>
+                                    }
+                                    @if (item.Pass == LSM.Models.Epass.EM)
+                                    {<p>Afternoon</p>
+                                    }
+                                    @if (item.Pass == LSM.Models.Epass.FMEM)
+                                    {
+                                        <p>Full day</p>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>

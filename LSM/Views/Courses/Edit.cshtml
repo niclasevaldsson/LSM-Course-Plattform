@@ -129,22 +129,25 @@
                 @Html.ActionLink("Add new module", "Create", "Modules", new { CourseId = Model.Id }, new { @class = "btn btn-success" })
                 <div class="table_div">
                     <table class="table">
-                        <tr>
-                            <th>View/Edit</th>
-                            <th>Start</th>
-                            <th>End</th>
-                        </tr>
-
-                        @foreach (var item in Model.Modules.ToList())
-                        {
+                        <caption>List of modules</caption>
+                        <thead>
                             <tr>
-                                <td>@Html.ActionLink(@item.Name, "Edit", "Modules", new { id = item.Id }, new { @class = "btn  btn-info" })</td>
-                                <td>@item.StartDate.ToShortDateString()</td>
-                                <td>@item.StopDate.ToShortDateString()</td>
-                            </tr>                           
+                                <th>View/Edit</th>
+                                <th>Start</th>
+                                <th>End</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Modules.ToList())
+                            {
+                                <tr>
+                                    <td>@Html.ActionLink(@item.Name, "Edit", "Modules", new { id = item.Id }, new { @class = "btn  btn-info" })</td>
+                                    <td>@item.StartDate.ToShortDateString()</td>
+                                    <td>@item.StopDate.ToShortDateString()</td>
+                                </tr>
 
-                        }
-
+                            }
+                        </tbody>
                     </table>
 
 
@@ -154,19 +157,22 @@
                 @Html.ActionLink("Add new student", "Register", "Account", new { CourseId = Model.Id, Teacher = false }, new { @class = "btn btn-success" })
                 <div class="table_div">
                     <table class="table">
-                        <tr>
-                            <th>View/Edit</th>
-                            <th>Email</th>
-                        </tr>
-
-                        @foreach (var item in Model.Users)
-                        {
+                        <thead>
                             <tr>
-                                @*<td>@Html.ActionLink(@item.FullName, "Edit", "Account", new { id = item.Id }, new { @class = "btn  btn-info" })</td>*@
-                                <td>@Html.ActionLink(@item.FullName, "Index", "Manage", new { id = item.Id }, new { @class = "btn  btn-info" })</td>
-                                <td>@item.Email</td>
+                                <th>View/Edit</th>
+                                <th>Email</th>
                             </tr>
-                        }
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Users)
+                            {
+                                <tr>
+                                    @*<td>@Html.ActionLink(@item.FullName, "Edit", "Account", new { id = item.Id }, new { @class = "btn  btn-info" })</td>*@
+                                    <td>@item.FullName</td>
+                                    <td>@item.Email</td>
+                                </tr>
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>
