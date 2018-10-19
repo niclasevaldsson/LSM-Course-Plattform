@@ -17,12 +17,18 @@ namespace LSM.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         
+        
         // GET: Activities/Create
         [Authorize(Roles = "Teacher")]
         public ActionResult Create(int ModuleId)
         {
-            ViewBag.Module = db.Modules.Where(m => m.Id == ModuleId).First();
-            ViewBag.ModuleForActivity = ModuleId;
+            //ViewBag.ModuleForActivity = ModuleId;
+            Module module = db.Modules.Where(m => m.Id == ModuleId).First();
+                 
+            ViewBag.moduleName = module.Name;
+            ViewBag.moduleId = module.Id;
+            ViewBag.courseName = module.Course.Name;
+            ViewBag.courseId = module.Course.Id;
             return View();
         }
 

@@ -6,20 +6,40 @@
 
 @{
     ViewBag.Title = "Create";
-    string moduleName = @ViewBag.Module.Name;Fix
-    int moduleId = @ViewBag.Module.Id;
+    string courseName = @ViewBag.courseName;
+    int courseId = @ViewBag.courseId;
+    string moduleName = @ViewBag.moduleName;
+    int moduleId = @ViewBag.moduleId;
+
 
     Module module = @ViewBag.Module;
 }
 
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+
+@*<nav aria-label="breadcrumb">
+     <ol class="breadcrumb">
+         <li>Orginal</li>
         <li class="breadcrumb-item">@Html.ActionLink("Home ", "Index", "Courses")</li>
         <li class="breadcrumb-item">@Html.ActionLink("Course: " + module.Course.Name, "Edit", "Courses", new { id = module.CourseId }, new { @class = "breadcrum-text" })</li>
         <li class="breadcrumb-item">@Html.ActionLink("Module: " + module.Name, "Edit", "Modules", new { id = moduleId }, new { @class = "breadcrum-text" })</li>
         <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title activity </li>
     </ol>
+</nav>*@
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li>Orginal</li>
+        <li class="breadcrumb-item">@Html.ActionLink("Home ", "Index", "Courses")</li>
+        <li class="breadcrumb-item">@Html.ActionLink("Course: " + courseName, "Edit", "Courses", new { id = courseId }, new { @class = "breadcrum-text" })</li>
+        <li class="breadcrumb-item">@Html.ActionLink("Module: " + moduleName, "Edit", "Modules", new { id = moduleId }, new { @class = "breadcrum-text" })</li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title activity </li>
+    </ol>
 </nav>
+
+
+ 
+    
+    
 
 <h1>Create Activity</h1>
 

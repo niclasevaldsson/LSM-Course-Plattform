@@ -41,9 +41,13 @@ namespace LSM.Controllers
         public ActionResult Create(int CourseId)
         {
 
-            ViewBag.CourseForModule = CourseId;
+            //ViewBag.CourseForModule = CourseId;
 
-            ViewBag.Course = db.Courses.Where(c => c.Id == CourseId).First();
+            Course course = db.Courses.Where(c => c.Id == CourseId).First();
+            ViewBag.courseName = course.Name;
+            ViewBag.courseId = course.Id;
+
+
 
             return View();
         }
