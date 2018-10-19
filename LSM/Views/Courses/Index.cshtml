@@ -9,21 +9,6 @@
 
 
 
-    if (string.IsNullOrWhiteSpace(messagetosend))
-    {
-
-        if (messagetosend == "none")
-        {
-            colortoshow = "red";
-        }
-        else
-        {
-            colortoshow = "green";
-
-
-        }
-
-    }
 }
 
 
@@ -34,9 +19,9 @@
 </nav>
 
 <h1>Courses</h1>
-@if (!string.IsNullOrWhiteSpace(messagetosend))
+@if (!(messagetosend == null))
 {
-    <div id="message2" class="@colortoshow"><p>messagetosend</p></div>
+    <div id="message2" class="green"><p>@messagetosend</p></div>
 }
 <p>
     @Html.ActionLink("Add new Course", "Create", new { id = "" }, new { @class = "btn btn-success" })

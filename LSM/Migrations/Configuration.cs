@@ -84,7 +84,7 @@ namespace LSM.Migrations
             var userManager = new UserManager<ApplicationUser>(userStore);
 
             var emails = new[] { "gandalf@aa.se", "galadriel@aa.se", "frodo@aa.se", "gimli@aa.se",
-                 "knatte@aa.se",  "fnatte@aa.se",  "tjatte@aa.se" };
+                 "knatte@aa.se",  "fnatte@aa.se",  "tjatte@aa.se"};
             var name = new[] { "Gandalf", "Galadriel", "Frodo", "Gimli",
                  "Knatte",  "Fnatte",  "Tjatte" };
             var lastname = new[] { "Gandalf", "Of the Forest", "Baggings", "Craftman",

@@ -8,37 +8,11 @@
 
 
 
-    if (!(ViewBag.Message == "None"))
-    {
-
-        if (messagetosend.Substring(messagetosend.Length - 8) == "deleted!")
-        {
-            colortoshow = "red";
-        }
-        else
-        {
-            colortoshow = "green";
-
-
-        }
-
-    }
-
-    //if (!(ViewBag.Message == "None"))
-    //{
-
-    //    if (messagetosend[messagetosend.Length - 4] == 't')
-    //    {
-    //        colortoshow = "red";
-    //    }
-    //    else
-    //    {
-    //        colortoshow = "green";
-    //    }
-
-    //}
-
 }
+
+
+
+
 @* Changed *@
 
 <nav aria-label="breadcrumb">
@@ -52,7 +26,8 @@
 <h1>Course: @Model.Name</h1>
 @if (!(ViewBag.Message == "None"))
 {
-<div id="message2" class="@colortoshow"><p>@ViewBag.Message</p></div>
+    <p>Hej</p>
+<div id="message2" class="green"><p>@messagetosend</p></div>
 }
 <div class="container">
 

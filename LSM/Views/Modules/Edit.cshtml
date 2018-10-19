@@ -2,16 +2,8 @@
 
 @{  ViewBag.Title = "Module info";
     string messagetoshow = ViewBag.Message;
-    string colortoshow = "";
-    if (!(messagetoshow == "None"))
-    {
-        if (messagetoshow.Substring(messagetoshow.Length - 8) == "deleted!")
-        { colortoshow = "red";
-        }
-        else
-        {colortoshow = "green";
-        }
-    }
+    string colortoshow = "green";
+  
    
 }
 
@@ -102,7 +94,6 @@
             @Html.ActionLink("Add new activity", "Create", "Activities", new { ModuleId = Model.Id }, new { @class = "btn btn-success" })
             <div class="table_div">
                 <table class="table table-striped">
-                    <caption>List of activities</caption>
                     <thead>
                         <tr>
                             <th>View/Edit</th>

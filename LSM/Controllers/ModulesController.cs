@@ -15,27 +15,7 @@ namespace LSM.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        //// GET: Modules
-        //public ActionResult Index()
-        //{
-        //    var modules = db.Modules.Include(m => m.Course);
-        //    return View(modules.ToList());
-        //}
-
-        //// GET: Modules/Details/5
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Module module = db.Modules.Find(id);
-        //    if (module == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(module);
-        //}
+       
 
         // GET: Modules/Create
         public ActionResult Create(int CourseId)
