@@ -21,6 +21,7 @@ namespace LSM.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime StopDate { get; set; }
 
+
         public virtual ICollection<ApplicationUser> Users { get; set; }
         public virtual ICollection<Module> Modules { get; set; }
         public virtual ICollection<Document> Documents { get; set; }
