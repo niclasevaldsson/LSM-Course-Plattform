@@ -1,23 +1,28 @@
 ﻿html {
     height: 100%;
 }
-
-a {
-    color: #EFB509;
-}
-
-
-.btn {
-    color:  whitesmoke;
-}
-
 body {
-    padding-top: 50px;   
+    padding-top: 50px;
     height: 100%;
     /*background-color: #002C54;*/
     padding-bottom: 0px;
     background-image: url(../Images/body-pattern.jpeg);
 }
+
+
+a {
+    color: #EFB509;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 100%;
+    background-color: #fdfdfd;
+    
+}
+
+
 #navbarTop {
     background-color: #16253D !important;
     color: #EFB509 !important;
@@ -32,12 +37,7 @@ body {
     background-color: #fdfdfd;
 }
 
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    min-height: 100%;
-    background-color: #fdfdfd;
-}
+
 
 .bread-crum-info a {
     color: #EFB509 !important;
@@ -57,9 +57,14 @@ textarea {
 }
 
 
-/*table {
-    margin: 20px 0px;
-}*/
+
+.form-horizontal {
+    background-image: url(../Images/body-pattern.jpeg);
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+}
 
 .btn {
     margin: 10px 0px;
@@ -76,24 +81,31 @@ textarea {
     opacity: 1;
 }
 
-/*.table_div {
-    /*max-height: 400px;*/
-    margin: 10px 0px;
-    /*border: double;*/
-    /*overflow: auto;*/
+/*/Change color for buttons in button groups dependning on if they are active or not*/
+.btn-group button {
+    opacity: 0.6;
 }
 
-       
+button.active {
+    opacity: 0.8 !important;
+}
+
+
+#tableStudents {
+    display: none;
+}
 
 
 #message2 {
           width: 100%;
-          display: none;
-         
-          
-
+          display: none;         
 
 }
+#message2 p {
+   font-size: 1em;
+   padding: 5px;
+   color: white;
+ }
 .green {
     background-color: green;
 }
@@ -102,44 +114,9 @@ textarea {
     background-color: red;
 }
 
-#message2 p {
-    font-size: 1em;
-    padding: 5px;
-    color: white;
-}
 
-/*#tableCourseInfo {
 
-    display: none;
-}*/
 
-/*footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-}*/
 
-#tableStudents {
-    display: none;
-}
 
-.btn-group button {
-    opacity: 0.6;
-}
 
-button.active {
-    opacity: 0.8 !important;
- 
-}
-
-.form-horizontal {
-    background-image: url(../Images/body-pattern.jpeg);
-    width: 500px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-}

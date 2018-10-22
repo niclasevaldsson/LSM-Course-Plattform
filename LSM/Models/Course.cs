@@ -10,6 +10,7 @@ namespace LSM.Models
     {
         public int Id { get; set; }
         public int Place { get; set; }              // This is the place, 0 means no place.
+        [Compare("hej")]
         [Required]
         [StringLength(120, ErrorMessage = "Name must be between 2 and 120 characters long and .", MinimumLength = 2)]
         public string Name { get; set; }
