@@ -59,10 +59,7 @@ namespace LSM.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Description,StartDate,StopDate")] Course course)
         {
-            if (course.StartDate > course.StopDate || course.StartDate < DateTime.Now.Date) {
 
-                return View(course);
-            }
             if (ModelState.IsValid)
             {
               

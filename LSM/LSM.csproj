@@ -200,9 +200,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810170818001_Fxes.cs" />
-    <Compile Include="Migrations\201810170818001_Fxes.Designer.cs">
-      <DependentUpon>201810170818001_Fxes.cs</DependentUpon>
+    <Compile Include="Migrations\201810220944111_tssdfsdf.cs" />
+    <Compile Include="Migrations\201810220944111_tssdfsdf.Designer.cs">
+      <DependentUpon>201810220944111_tssdfsdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -212,6 +212,8 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Module.cs" />
+    <Compile Include="ModelValidations\CheckEmailUser.cs" />
+    <Compile Include="ModelValidations\DateGreaterEqualToToday.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -310,8 +312,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810170818001_Fxes.resx">
-      <DependentUpon>201810170818001_Fxes.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810220944111_tssdfsdf.resx">
+      <DependentUpon>201810220944111_tssdfsdf.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

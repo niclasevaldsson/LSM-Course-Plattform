@@ -23,8 +23,7 @@ namespace LSM.Controllers
         public ActionResult Create(int ModuleId)
         {
             //ViewBag.ModuleForActivity = ModuleId;
-            Module module = db.Modules.Where(m => m.Id == ModuleId).First();
-                 
+            Module module = db.Modules.Where(m => m.Id == ModuleId).First();   
             ViewBag.moduleName = module.Name;
             ViewBag.moduleId = module.Id;
             ViewBag.courseName = module.Course.Name;
