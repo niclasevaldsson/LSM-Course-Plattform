@@ -11,7 +11,7 @@ namespace LSM.Models
     public class Activity
     {
         public int Id { get; set; }
-        public int Place { get; set; }              // In the list, this is the place. 0 is no place.
+        //public int Place { get; set; }              // In the list, this is the place. 0 is no place.
         [Required]
         [StringLength(120, ErrorMessage = "Name must be between 2 and 120 characters long and .", MinimumLength = 2)]
         public string Name { get; set; }

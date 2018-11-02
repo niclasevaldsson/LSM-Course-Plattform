@@ -3,7 +3,7 @@ namespace LSM.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class tssdfsdf : DbMigration
+    public partial class AddedUsers : DbMigration
     {
         public override void Up()
         {

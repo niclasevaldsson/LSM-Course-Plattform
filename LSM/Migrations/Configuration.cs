@@ -13,56 +13,45 @@ namespace LSM.Migrations
     {
         public Configuration()
         {
+
             AutomaticMigrationsEnabled = false;
             ContextKey = "LSM.Models.ApplicationDbContext";
         }
 
         protected override void Seed(LSM.Models.ApplicationDbContext context)
         {
-           
-            var courses = new List<Course>   
+
+            //Use debugging for the seed during the update database
+            if (System.Diagnostics.Debugger.IsAttached == false)
+                {
+                    System.Diagnostics.Debugger.Launch();
+                }
+
+
+            var courses = new List<Course>
+
             {
                 new Course { Name = "Java", Description = "Coding Java",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01")},
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01")},
                 new Course { Name = "Python", Description = "Coding Pyhton",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01")},
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01")},
                 new Course { Name = "C#", Description = "Coding C#",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01")},
-                new Course { Name = "Kurs med lång beskrivning", Description = "Proin tincidunt ullamcorper lectus, sit amet tempus neque maximus quis. Phasellus at lorem id nunc hendrerit congue quis eu odio. Praesent convallis vitae odio in posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin blandit diam eu dignissim pharetra. In volutpat orci nec quam placerat, nec vehicula lacus vulputate. Nullam sagittis sollicitudin nisl, non blandit orci vestibulum at. Nullam leo est, finibus ut iaculis in, consectetur eu ligula. Integer nisi neque, tempus id orci ac, porttitor sodales nunc. Praesent pretium libero scelerisque, rhoncus purus in, consectetur risus. Praesent sollicitudin est nec lectus pretium, at bibendum purus volutpat. Quisque viverra imperdiet lacus, non volutpat metus porttitor eu. Praesent convallis neque odio, cursus pretium ipsum convallis eu. Vivamus ut metus id ante tristique fringilla id quis augue.Proin tincidunt ullamcorper lectus, sit amet tempus neque maximus quis. Phasellus at lorem id nunc hendrerit congue quis eu odio. Praesent convallis vitae odio in posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin blandit diam eu dignissim pharetra. In volutpat orci nec quam placerat, nec vehicula lacus vulputate. Nullam sagittis sollicitudin nisl, non blandit orci vestibulum at. Nullam leo est, finibus ut iaculis in, consectetur eu ligula. Integer nisi neque, tempus id orci ac, porttitor sodales nunc. Praesent pretium libero scelerisque, rhoncus purus in, consectetur risus. Praesent sollicitudin est nec lectus pretium, at bibendum purus volutpat. Quisque viverra imperdiet lacus, non volutpat metus porttitor eu. Praesent convallis neque odio, cursus pretium ipsum convallis eu. Vivamus ut metus id ante tristique fringilla id quis augue.",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01")},
-                new Course { Name = "Kurs med många moduler, studenter och aktiviter",   Description = "Kurs med många moduler, studenter och aktiviter", 
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01")},
-
-        };
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01")},
+                new Course { Name = "Course with long description", Description = "Proin tincidunt ullamcorper lectus, sit amet tempus neque maximus quis. Phasellus at lorem id nunc hendrerit congue quis eu odio. Praesent convallis vitae odio in posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin blandit diam eu dignissim pharetra. In volutpat orci nec quam placerat, nec vehicula lacus vulputate. Nullam sagittis sollicitudin nisl, non blandit orci vestibulum at. Nullam leo est, finibus ut iaculis in, consectetur eu ligula. Integer nisi neque, tempus id orci ac, porttitor sodales nunc. Praesent pretium libero scelerisque, rhoncus purus in, consectetur risus. Praesent sollicitudin est nec lectus pretium, at bibendum purus volutpat. Quisque viverra imperdiet lacus, non volutpat metus porttitor eu. Praesent convallis neque odio, cursus pretium ipsum convallis eu. Vivamus ut metus id ante tristique fringilla id quis augue.Proin tincidunt ullamcorper lectus, sit amet tempus neque maximus quis. Phasellus at lorem id nunc hendrerit congue quis eu odio. Praesent convallis vitae odio in posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin blandit diam eu dignissim pharetra. In volutpat orci nec quam placerat, nec vehicula lacus vulputate. Nullam sagittis sollicitudin nisl, non blandit orci vestibulum at. Nullam leo est, finibus ut iaculis in, consectetur eu ligula. Integer nisi neque, tempus id orci ac, porttitor sodales nunc. Praesent pretium libero scelerisque, rhoncus purus in, consectetur risus. Praesent sollicitudin est nec lectus pretium, at bibendum purus volutpat. Quisque viverra imperdiet lacus, non volutpat metus porttitor eu. Praesent convallis neque odio, cursus pretium ipsum convallis eu. Vivamus ut metus id ante tristique fringilla id quis augue.",
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01")},
+                new Course { Name = "Course with many modules, activites students.",   Description = "Course with many modules, activites students.",
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01")},
+          };
             var date = DateTime.Now;
-
-            //for (int index = 0; index < 15; index++)
-            //{
-            //    date.AddMonths(1);
-
-            //    courses.Add(new Course
-            //    {
-            //        Name = "Kurs" + index,
-            //        Description = "Qwerty 123",
-            //        StartDate = date,
-            //        StopDate = date
-            //    });
-            //}
-
-
-            //Changed
-
+                       
             courses.ForEach(s => context.Courses.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();
 
-            var CourseMany = context.Courses.Where(m => m.Name == "Kurs med många moduler, studenter och aktiviter").First();
+            var CourseMany = context.Courses.Where(m => m.Name == "Course with many modules, activites students.").First();
             var CourseJava = context.Courses.Where(m => m.Name == "Java").First();
             var CourseC = context.Courses.Where(m => m.Name == "C#").First();
             var CoursePython = context.Courses.Where(m => m.Name == "Python").First();
-
-
-
-
+                                 
             var roleStore = new RoleStore<IdentityRole>(context);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
 
@@ -83,12 +72,12 @@ namespace LSM.Migrations
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new UserManager<ApplicationUser>(userStore);
 
-            var emails = new[] { "gandalf@aa.se", "galadriel@aa.se", "frodo@aa.se", "gimli@aa.se",
-                 "knatte@aa.se",  "fnatte@aa.se",  "tjatte@aa.se"};
-            var name = new[] { "Gandalf", "Galadriel", "Frodo", "Gimli",
-                 "Knatte",  "Fnatte",  "Tjatte" };
-            var lastname = new[] { "Gandalf", "Of the Forest", "Baggings", "Craftman",
-                 "Anka",  "Anka",  "Anka" };
+            var emails = new[] { "aragon@a1.se", "galadriel@a1.se", "frodo@a1.se", "gimli@a1.se",
+                 "bilbo@a1.se",  "sam@a1.se",  "pippin@a1.se"};
+            var name = new[] { "Aragon", "Galadriel", "Frodo", "Gimli",
+                 "Bilbo",  "Samwise",  "Peregrin" };
+            var lastname = new[] { "Elessar", "Of the Forest", "Baggings", "Craftman",
+                 "Baggins",  "Gamgee",  "Took" };
 
             string emailname;
 
@@ -116,132 +105,66 @@ namespace LSM.Migrations
             }
 
 
-            //int kingnumber = 1;
-            //foreach (var email in emails)
-            //{
-
-
-            //    kingnumber++;
-            //    if (context.Users.Any(u => u.UserName == emails[i])) continue;
-
-            //    // Create user, with username and pwd
-            //    // Update with FirstName, LastName
-            //    DateTime t1 = DateTime.Now;
-            //    var user = new ApplicationUser
-            //    {
-
-            //        UserName = email,
-            //        Email = email,
-            //        FirstName = "Karl",
-            //        LastName = kingnumber.ToString(),
-            //        CourseId = CourseMany.Id
-            //    };
-            //    var result = userManager.Create(user, "Lsm123!");
-            //    if (!result.Succeeded)
-            //    {
-            //        throw new Exception(string.Join("\n", result.Errors));
-            //    }
-            //}
-
-
-
-
-            var u1 = userManager.FindByName("gandalf@aa.se");
+            
+            var u1 = userManager.FindByName("aragon@a1.se");
             userManager.AddToRole(u1.Id, "Student");
 
 
-            var u2 = userManager.FindByName("galadriel@aa.se");
+            var u2 = userManager.FindByName("galadriel@a1.se");
             userManager.AddToRole(u2.Id, "Student");
 
 
-            var u3 = userManager.FindByName("frodo@aa.se");
+            var u3 = userManager.FindByName("frodo@a1.se");
             userManager.AddToRoles(u3.Id, "Student");
 
 
-            var u4 = userManager.FindByName("gimli@aa.se");
+            var u4 = userManager.FindByName("gimli@a1.se");
             userManager.AddToRoles(u4.Id, "Student");
 
 
-            var u5 = userManager.FindByName("knatte@aa.se");
+            var u5 = userManager.FindByName("bilbo@a1.se");
             userManager.AddToRoles(u5.Id, "Student");
 
 
-            var u6 = userManager.FindByName("fnatte@aa.se");
+            var u6 = userManager.FindByName("sam@a1.se");
             userManager.AddToRoles(u6.Id, "Student");
 
 
-            var u7 = userManager.FindByName("tjatte@aa.se");
+            var u7 = userManager.FindByName("pippin@a1.se");
             userManager.AddToRoles(u7.Id, "Student");
-            //Skippat från alla rader u7.CourseId = 5;
-
-
-            //var JavaDude = new ApplicationUser
-            //{
-            //    UserName = "java@lsm.se",
-            //    Email = "java@lsm.se",
-            //    FirstName = "Java",
-            //    LastName = "Dude",
-            //    CourseId = CourseC.Id
-            //};
-            //userManager.Create(JavaDude, "Lsm123!");
-            //var u8 = userManager.FindByName("java@lsm.se");
-
-            //userManager.AddToRoles(u8.Id, "Student");
 
             var Teacher = new ApplicationUser
             {
-                UserName = "larare@lsm.se",
-                Email = "larare@lsm.se",
-                FirstName = "Lärare",               
-                LastName = "Lärare",
+                UserName = "teacher@lsm.se",
+                Email = "teacher@lsm.se",
+                FirstName = "Gandalf",               
+                LastName = "The Grey",
                 CourseId = null
             };
 
             userManager.Create(Teacher, "Lsm123!");
-            var u9 = userManager.FindByName("larare@lsm.se");
-            userManager.AddToRoles(u9.Id, "Teacher");
-
-            //var PythonDude = new ApplicationUser
-            //{
-            //    UserName = "python@lsm.se",
-            //    Email = "python@lsm.se",
-            //    FirstName = "Python",
-            //    LastName = "Dude",
-            //    CourseId = CoursePython.Id
-            //};
-            //userManager.Create(JavaDude, "Lsm123!");
-            //var u10 = userManager.FindByName("python@lsm.se");
-
-            //var CDude = new ApplicationUser
-            //{
-            //    UserName = "cdude@lsm.se",
-            //    Email = "cdude@lsm.se",
-            //    FirstName = "C#",
-            //    LastName = "Dude",
-            //    CourseId = CourseC.Id
-            //};
-            //userManager.Create(CDude, "Lsm123!");
-            //var u11 = userManager.FindByName("cdude@lsm.se");
+            var u8 = userManager.FindByName("teacher@lsm.se");
+            userManager.AddToRoles(u8.Id, "Teacher");
 
             var modules = new List<Module>
 
             {
-                new Module { Name = "Manga Aktivititer", Description = "First introduction",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CourseMany.Id },
+                new Module { Name = "Many activities", Description = "First introduction",
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CourseMany.Id },
                 new Module { Name = "Part1", Description = "First introduction",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CourseJava.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CourseJava.Id },
                 new Module { Name = "Part2", Description = "Going uphill",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CourseJava.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CourseJava.Id },
                 new Module { Name = "Part3", Description = "Go downhill",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CourseC.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CourseC.Id },
                 new Module { Name = "Part4", Description = "Go forward",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CourseC.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CourseC.Id },
                 new Module { Name = "Part5", Description = "Run back",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CoursePython.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CoursePython.Id },
                 new Module { Name = "Part6", Description = "Start flying",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CoursePython.Id },
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CoursePython.Id },
                 new Module { Name = "Part7", Description = "Take a walk",
-                    StartDate = DateTime.Parse("2010-09-01"), StopDate = DateTime.Parse("2010-09-01"), CourseId = CoursePython.Id }
+                    StartDate = DateTime.Parse("2019-09-01"), StopDate = DateTime.Parse("2019-10-01"), CourseId = CoursePython.Id }
 
             };
 
@@ -266,24 +189,24 @@ namespace LSM.Migrations
 
             modules.ForEach(s => context.Modules.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();
-            var ActivityMany = context.Modules.Where(m => m.Name == "Manga Aktivititer").First();
-           
-            
+            var ActivityMany = context.Modules.Where(m => m.Name == "Many activities").First();
+
+
 
 
 
             var act = new List<Activity>
             {
                 new Activity { Name = "Act20", Description = "1",
-                    Day = DateTime.Parse("2010-09-01"), Pass = Epass.FMEM, ModuleId = 1 },
+                    Day = DateTime.Parse("2019-09-01"), Pass = Epass.FMEM, ModuleId = 1 },
                 new Activity { Name = "Act21", Description = "2",
-                    Day = DateTime.Parse("2010-09-01"), Pass = Epass.FMEM, ModuleId = 2 },
+                    Day = DateTime.Parse("2019-09-01"), Pass = Epass.FMEM, ModuleId = 2 },
                 new Activity { Name = "Act22", Description = "3",
-                    Day = DateTime.Parse("2010-09-01"), Pass = Epass.FMEM, ModuleId = 3 },
+                    Day = DateTime.Parse("2019-09-01"), Pass = Epass.FMEM, ModuleId = 3 },
                 new Activity { Name = "Act23", Description = "4",
-                    Day = DateTime.Parse("2010-09-01"), Pass = Epass.FMEM, ModuleId = 3 },
+                    Day = DateTime.Parse("2019-09-01"), Pass = Epass.FMEM, ModuleId = 3 },
                 new Activity { Name = "Act24", Description = "5",
-                    Day = DateTime.Parse("2010-09-01"), Pass = Epass.FMEM, ModuleId = 3 }
+                    Day = DateTime.Parse("2019-09-01"), Pass = Epass.FMEM, ModuleId = 3 }
 
 
             };
@@ -305,10 +228,7 @@ namespace LSM.Migrations
 
             act.ForEach(s => context.Activitys.AddOrUpdate(p => p.Name, s));
             context.SaveChanges();
-
-
-            //context.Courses.Find(p => p.Name == "Tjoho");
-
+                       
         }
     }
 }

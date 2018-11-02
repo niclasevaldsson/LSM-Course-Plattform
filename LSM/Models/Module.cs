@@ -9,7 +9,7 @@ namespace LSM.Models
     public class Module
     {
         public int Id { get; set; }
-        public int Place { get; set; }              // Place int lists, 
+        //public int Place { get; set; }              // Place int lists, 
         [Required]
         [StringLength(120, ErrorMessage = "Name must be between 2 and 120 characters long and .", MinimumLength = 2)]
         public string Name { get; set; }
