@@ -213,7 +213,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="ModelValidations\CheckEmailUser.cs" />
-    <Compile Include="ModelValidations\CheckStopDate.cs" />
     <Compile Include="ModelValidations\DateGreaterEqualToToday.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
