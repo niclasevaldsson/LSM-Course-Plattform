@@ -16,15 +16,6 @@
 }
 
 
-@*<nav aria-label="breadcrumb">
-     <ol class="breadcrumb">
-         <li>Orginal</li>
-        <li class="breadcrumb-item">@Html.ActionLink("Home ", "Index", "Courses")</li>
-        <li class="breadcrumb-item">@Html.ActionLink("Course: " + module.Course.Name, "Edit", "Courses", new { id = module.CourseId }, new { @class = "breadcrum-text" })</li>
-        <li class="breadcrumb-item">@Html.ActionLink("Module: " + module.Name, "Edit", "Modules", new { id = moduleId }, new { @class = "breadcrum-text" })</li>
-        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title activity </li>
-    </ol>
-</nav>*@
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -35,8 +26,6 @@
         <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title activity </li>
     </ol>
 </nav>
-
-
  
     
     
@@ -88,7 +77,7 @@
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Create" class="btn btn-success" />
-            @Html.ActionLink("Cancel", "Edit", "Modules", new { id = ViewBag.ModuleForActivity }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Cancel", "Edit", "Modules", new { id = moduleId }, new { @class = "btn btn-info" })
         </div>
     </div>
 </div>

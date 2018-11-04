@@ -1,29 +1,41 @@
 ﻿@model LSM.Models.RegisterViewModel
-@{
-    ViewBag.Title = "Register";
+@if (ViewBag.CourseName == "Teacher")
+{
+
+    ViewBag.Title = "Register Teacher";
+
 }
+else {
+
+    ViewBag.Title = "Register Student";
+   
+
+}
+
 
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item">@Html.ActionLink("Courses", "Index", "Home")</li>
+        <li class="breadcrumb-item">@Html.ActionLink("Home ", "Index", "Courses")</li>
         @if (ViewBag.CourseName == "Teacher")
-    {
-        <li class="breadcrumb-item active" aria-current="page">Register Teacher</li>
+        {
+            <li class="breadcrumb-item active" aria-current="page">Register Teacher</li>
         }
-        else{
+        else
+        {
             string ModelName = ViewBag.CourseName;
+
             int CourseId = ViewBag.CourseId;
-        <li class="breadcrumb-item">@Html.ActionLink("Home", "Index", "Home")</li>
-        <li class="breadcrumb-item">@Html.ActionLink("Course: " + ModelName, "Edit", "Courses", new { id = CourseId }, new { @class = "breadcrum-text" })</li>
-        <li class="breadcrumb-item active" aria-current="page">Register Student</li>
+            <li class="breadcrumb-item">@Html.ActionLink("Course: " + ModelName, "Edit", "Courses", new { id = CourseId }, new { @class = "breadcrum-text" })</li>
+            <li class="breadcrumb-item active" aria-current="page">Register Student</li>
         }
     </ol>
 </nav>
 
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
     @Html.AntiForgeryToken()
     <h4>Create a new account.</h4>
     <hr />
@@ -66,7 +78,19 @@
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-success" value="Register" />
-        </div>
+
+            @if (ViewBag.CourseName == "Teacher")
+            {
+                @Html.ActionLink("Cancel", "Index", "Courses", new { id = 0 }, new { @class = "btn btn-info" })
+            }
+            else
+            {
+                int CourseId = ViewBag.CourseId;
+                @Html.ActionLink("Cancel", "Edit", "Courses", new { id = CourseId }, new { @class = "btn btn-info" })
+             }
+
+         </div>     
+        
     </div>
 }
 

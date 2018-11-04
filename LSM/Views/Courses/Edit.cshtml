@@ -26,7 +26,6 @@
 <h1>Course: @Model.Name</h1>
 @if (!(ViewBag.Message == "None"))
 {
-    <p>Hej</p>
 <div id="message2" class="green"><p>@messagetosend</p></div>
 }
 <div class="container">
@@ -104,8 +103,7 @@
                 @Html.ActionLink("Add new module", "Create", "Modules", new { CourseId = Model.Id }, new { @class = "btn btn-success" })
                 <div class="table_div">
                     <table class="table">
-                        <caption>List of modules</caption>
-                        <thead>
+                       <thead>
                             <tr>
                                 <th>View/Edit</th>
                                 <th>Start</th>
