@@ -42,7 +42,7 @@ $(document).ready(function () {
         buttonNonActive.removeClass("active");
     }
 
-
+    $("#test").DataTable();
 
 
 });

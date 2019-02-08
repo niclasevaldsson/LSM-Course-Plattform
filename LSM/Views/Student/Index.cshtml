@@ -25,8 +25,8 @@
     <div class="row">
         <div class="col-md-6">
             @*<div class="btn-group">
-            <button class="btn btn-primary active" id="buttonSchedule">Schedule this week</button>
-            <button class="btn btn-primary" id="buttonCourseInfo">Course Info</button>
+            <button class="btn button-design active" id="buttonSchedule">Schedule this week</button>
+            <button class="btn button-design" id="buttonCourseInfo">Course Info</button>
 
         </div>*@
             @*<div id="tableSchedule">
@@ -74,8 +74,8 @@
         </div>
         <div class="col-md-6">
             <div class="btn-group">
-                <button class="btn btn-primary active" id="buttonModules">Modules</button>
-                <button class="btn btn-primary" id="buttonStudents">Students</button>
+                <button class="btn button-design active" id="buttonModules">Modules</button>
+                <button class="btn button-design" id="buttonStudents">Students</button>
             </div>
 
             <div id="tableModules">
@@ -116,7 +116,7 @@
                         @foreach (var item in Model.Modules.ToList())
         {
                 <tr>
-                    <td>@Html.ActionLink(@item.Name, "Module", "Student", new { id = item.Id }, new { @class = "btn  btn-info" })</td>
+                    <td>@Html.ActionLink(@item.Name, "Module", "Student", new { id = item.Id }, new { @class = "btn  button-design" })</td>
                     <td>@item.StartDate</td>
                     <td>@item.StopDate</td>
                 </tr>
@@ -142,7 +142,7 @@
                         @foreach (var item in Model.Users)
                         {
                             <tr>
-                                @*<td>@Html.ActionLink(@item.FullName, "Edit", "Account", new { id = item.Id }, new { @class = "btn  btn-info" })</td>*@
+                                @*<td>@Html.ActionLink(@item.FullName, "Edit", "Account", new { id = item.Id }, new { @class = "btn  button-design" })</td>*@
                                 <td>@item.FullName</td>
                                 <td>@item.Email</td>
                             </tr>

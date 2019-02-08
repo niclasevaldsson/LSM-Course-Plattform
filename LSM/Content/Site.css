@@ -1,17 +1,94 @@
-﻿html {
+﻿a {
+    color: #EFB509;
+}
+
+.button-design {
+    margin: 10px 0px;
+    background-color: #16253D;
+    color: #EFB509;
+    border: none;
+    opacity: 0.8;
+}
+
+    .button-design:hover {
+        margin: 10px 0px;
+        background-color: #16253D;
+        color: #EFB509;
+        opacity: 1;
+    }
+
+.btn-group .button-design {
+    opacity: 0.6;
+}
+
+.button-design.active {
+    opacity: 0.8;
+    color: #EFB509;
+}
+
+.button-design:active, .button-design:visited, .button-design:focus {
+    color: #EFB509;
+}
+
+.btn-group .button-design:hover {
+    opacity: 1;
+}
+
+#message2 {
+    width: 100%;
+    display: none;
+}
+
+    #message2 p {
+        font-size: 1em;
+        padding: 5px;
+        color: white;
+    }
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+html {
     height: 100%;
 }
+
 body {
     padding-top: 50px;
     height: 100%;
     /*background-color: #002C54;*/
     padding-bottom: 0px;
-    background-image: url(../Images/body-pattern.jpeg);
+    background: url(../Images/body-pattern.jpeg);
 }
 
+#bodyloginpage {
+    background: #fdfdfd;
+}
 
-a {
-    color: #EFB509;
+#navbarTop {
+    background-color: #16253D;
+}
+
+    #navbarTop a {
+        color: #EFB509;
+    }
+
+.breadcrumb {
+    background-color: #fdfdfd;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
 }
 
 .body-content {
@@ -19,42 +96,9 @@ a {
     padding-right: 15px;
     min-height: 100%;
     background-color: #fdfdfd;
-    
 }
 
 
-#navbarTop {
-    background-color: #16253D !important;
-    color: #EFB509 !important;
-
-}
-
-#navbarTop a {
-    color: #EFB509 !important;
-}/* Set padding to keep content from hitting the edges */
-
-.breadcrumb {
-    background-color: #fdfdfd;
-}
-
-
-
-.bread-crum-info a {
-    color: #EFB509 !important;
-}
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 
 
@@ -66,57 +110,14 @@ textarea {
     padding: 20px;
 }
 
-.btn {
-    margin: 10px 0px;
-    background-color: #16253D !important;
-    color: #EFB509 !important;
-    border: none;
-    opacity: 0.8;
-}
 
-.btn-info:hover {
-    margin: 10px 0px;
-    background-color: #16253D !important;
-    color: #EFB509 !important;
-    opacity: 1;
-}
 
-/*/Change color for buttons in button groups dependning on if they are active or not*/
-.btn-group button {
-    opacity: 0.6;
-}
 
-button.active {
-    opacity: 0.8 !important;
-}
 
 
 #tableStudents {
     display: none;
 }
-
-
-#message2 {
-          width: 100%;
-          display: none;         
-
-}
-#message2 p {
-   font-size: 1em;
-   padding: 5px;
-   color: white;
- }
-.green {
-    background-color: green;
-}
-
-.red {
-    background-color: red;
-}
-
-
-
-
 
 
 

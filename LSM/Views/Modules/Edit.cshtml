@@ -80,8 +80,8 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Save" class="btn btn-success" />
-                            @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger" })
+                            <input type="submit" value="Save" class="btn button-design" />
+                            @Html.ActionLink("Delete", "Delete", new { id = Model.Id }, new { @class = "btn button-design" })
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
 
 
         <div class="col-md-6">
-            @Html.ActionLink("Add new activity", "Create", "Activities", new { ModuleId = Model.Id }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Add new activity", "Create", "Activities", new { ModuleId = Model.Id }, new { @class = "btn button-design" })
             <div class="table_div">
                 <table class="table table-striped">
                     <thead>
@@ -106,7 +106,7 @@
                         {
                             <tr>
                                 <td>
-                                    @Html.ActionLink(item.Name, "Edit", "Activities", new { id = item.Id }, new { @class = "btn btn-info" })
+                                    @Html.ActionLink(item.Name, "Edit", "Activities", new { id = item.Id }, new { @class = "btn button-design" })
                                 </td>
                                 <td>
                                     @{ string month = item.Day.Month.ToString();
