@@ -35,25 +35,11 @@ namespace LSM.Controllers
                     
                 //}
 
-                if ((m.StopDate > DateTime.Now) && (m.StartDate < DateTime.Now.AddDays(6)))
-                {
-
-                    foreach (var a in m.Activitys)                       
-                     if((a.Day > DateTime.Now) && (a.Day < DateTime.Now.AddDays(6)))
-                    {
-                        ActivityListNow.Add(a);
-
-
-                    }
-
-
-                }
+          
 
 
 
             }
-            //ViewBag.ModueListNow = ModuleListNow;
-            ViewBag.ActivityListNow = ActivityListNow.OrderByDescending(x=>x.Day).ToList();
             return View(course);
         }
 

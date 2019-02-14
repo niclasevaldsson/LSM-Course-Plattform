@@ -4,28 +4,33 @@
     /**/
 
     ViewBag.Title = "Index";
-    string messagetosend = ViewBag.Message;
-    string colortoshow = "";
+
+
 
 
 
 }
 
 
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb-design">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">Home</li>
     </ol>
 </nav>
 
-<h1>Courses</h1>
-@if (!(messagetosend == null))
-{
-    <div id="message2" class="green"><p>@messagetosend</p></div>
-}
-<p>
-    @Html.ActionLink("Add new Course", "Create", new { id = "" }, new { @class = "btn button-design" })
-</p>
+
+
+    <h1>Courses</h1>
+    <div id="message-row">
+        @if (!(String.IsNullOrEmpty(ViewBag.Message)))
+        {
+            <p id="message">@ViewBag.Message</p>
+        }
+    </div>
+
+
+@Html.ActionLink("Add new Course", "Create", new { id = "" }, new { @class = "btn button-design" })
+
 <table class="table table-striped responive" id="coursetable">
     <thead>
         <tr>
@@ -63,6 +68,6 @@
 
 
 
-@*@section Scripts {
-        @Scripts.Render("~/Scripts/ScriptforLSM.js")
-    }*@
+@section Scripts {
+    @Scripts.Render("~/Scripts/ScriptforLSM.js")
+}

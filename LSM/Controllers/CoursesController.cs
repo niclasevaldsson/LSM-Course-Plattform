@@ -19,42 +19,27 @@ namespace LSM.Controllers
         // GET: Courses
         public ActionResult Index(int? id, string message)
         {
+
             
-            ViewBag.Message = message;
             string usernamne = User.Identity.GetUserId();
             var user = db.Users.Find(usernamne);
             if (user.Course == null)
             {
-                return View(db.Courses.OrderByDescending(x => x.StartDate).ToList());
+                var listOfCourses = db.Courses.OrderByDescending(x => x.StartDate).ToList();
+                ViewBag.Message = TempData["message"];
+                return View(listOfCourses);
 
             }
             return RedirectToAction("Index", "Student");
         }
 
-        //[Authorize(Roles = "Teacher")]
-        //public ActionResult Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-        //    }
-        //    Course course = db.Courses.Find(id);
-        //    if (course == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(course);
-        //}
-
-        [Authorize(Roles = "Teacher")]
+         [Authorize(Roles = "Teacher")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Courses/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Name,Description,StartDate,StopDate")] Course course)
@@ -65,8 +50,9 @@ namespace LSM.Controllers
               
                 db.Courses.Add(course);
                 db.SaveChanges();
-                string messagetowrite = "Course " + course.Name + " added!";
-                return RedirectToAction("Index", new { message = messagetowrite });
+                TempData["message"] = $"Course {course.Name} added!";
+                return RedirectToAction("Index");
+
               
             }
 
@@ -74,9 +60,9 @@ namespace LSM.Controllers
         }
 
         [Authorize(Roles = "Teacher")]
-        public ActionResult Edit(int? id, string Message = "None")
+        public ActionResult Edit(int? id)
         {
-            ViewBag.Message = Message;
+           
 
             if (id == null)
             {
@@ -87,6 +73,8 @@ namespace LSM.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.Message = TempData["message"];
             return View(course);
         }
 
@@ -101,8 +89,8 @@ namespace LSM.Controllers
             {
                 db.Entry(course).State = EntityState.Modified;
                 db.SaveChanges();
-                string messagetowrite = "Course " + course.Name + " edited!";
-                return RedirectToAction("Index", new {message = messagetowrite });
+                TempData["message"] = $"Course {course.Name} edited!";
+                return RedirectToAction("Index");
             }
             return View(course);
         }
@@ -136,8 +124,8 @@ namespace LSM.Controllers
             
             db.Courses.Remove(course);
             db.SaveChanges();
-            string messagetowrite = "Course " + course.Name + " deleted!";
-            return RedirectToAction("Index", new {message = messagetowrite});
+            TempData["message"] = $"Course {course.Name} deleted!";
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

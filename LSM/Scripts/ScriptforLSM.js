@@ -2,19 +2,20 @@
 
 $(document).ready(function () {
 
-    var tableCourseInfo = $("#tableCourseInfo");
-    var tableSchedule = $("#tableSchedule");
-    var buttonSchedule = $("#buttonSchedule");
-    var buttonCourseInfo = $("#buttonCourseInfo");
-    var tableModules = $("#tableModules");
-    var tableStudents = $("#tableStudents");
-    var buttonModulesInfo = $("#buttonModules");
-    var buttonStudents = $("#buttonStudents");
+    const tableCourseInfo = $("#tableCourseInfo");
+    const tableSchedule = $("#tableSchedule");
+    const buttonSchedule = $("#buttonSchedule");
+    const buttonCourseInfo = $("#buttonCourseInfo");
+    const tableModules = $("#tableModules");
+    const tableStudents = $("#tableStudents");
+    const buttonModulesInfo = $("#buttonModules");
+    const buttonStudents = $("#buttonStudents");
 
 
-    $('#message2').fadeIn('slow', function () {
-        $('#message2').delay(3000).fadeOut('slow');
+    $('#message').fadeIn('slow', function () {
+        $('#message').delay(3000).fadeOut('slow');
     });
+
 
 
     buttonCourseInfo.on("click", function () {
@@ -42,7 +43,7 @@ $(document).ready(function () {
         buttonNonActive.removeClass("active");
     }
 
-    $("#test").DataTable();
+
 
 
 });
